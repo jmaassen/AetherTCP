@@ -3,7 +3,7 @@
         Build file for TCP implementation of Aether API.
     </description>
 
-    <target name="build" description="Build TCP implementation of Aether" depends="clean,compile" />
+    <target name="build" description="Build TCP implementation of Aether" depends="clean,compile,javadoc" />
 
     <property name="version-tag" value="1.0" />
 
@@ -113,9 +113,8 @@
         <!-- Create the javadoc directory -->
         <delete dir="${javadoc}" />
         <mkdir dir="${javadoc}" />
-        <javadoc destdir="${javadoc}" access="public" sourcepath="src" windowtitle="AetherTCP Documentation" packagenames="nl.esciencecenter.aether.impl.tcp" classpathref="default.classpath" overview="src/overview.html" doctitle="AetherTCP Documentation" bottom="Netherlands eScience Center">
+        <javadoc destdir="${javadoc}" access="public" sourcepath="src" windowtitle="AetherTCP Documentation" packagenames="nl.esciencecenter.aether.impl.tcp" classpathref="default.classpath" doctitle="AetherTCP Documentation" bottom="Netherlands eScience Center">
 	    <link href="http://download.oracle.com/javase/1.7.0/docs/api/" />
-            <tag name="ibis.experimental" description="WARNING: This is an Experimental feature of the IPL. It may not function correctly, future releases of the IPL may have a revised API for this feature, or it may be removed completely. " />
         </javadoc>
     </target>
 
